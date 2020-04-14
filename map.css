@@ -1,0 +1,76 @@
+figure {
+    background-color: white;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 9pt;
+}
+
+#tooltip {
+    font-weight: 600;
+    text-shadow: 0px 0px 2px white;
+    fill: black;
+    stroke: none;
+}
+
+path.land {
+    fill: #dddddd;
+    stroke: none;
+}
+
+path.neighborhood {
+    fill: none;
+    stroke: white;
+    stroke-width: 3.5px;
+    pointer-events: none;
+}
+
+path.street {
+    fill: none;
+    stroke: white;
+    stroke-width: 1px;
+    pointer-events: none;
+}
+
+figure .active {
+    stroke: green !important;
+    /* stroke-width: 1.5px !important; */
+}
+
+circle.symbol {
+    fill-opacity: 0.7;
+    stroke: white;
+}
+
+figure a:link,
+a:visited {
+    color: #444444;
+}
+
+figure a:hover,
+a:active {
+    color: green;
+}
+
+#vis img {
+    border: 1px solid white;
+}
+
+table#info {
+    padding: 10px !important;
+    border-radius: 5px;
+}
+
+.legend,
+table,
+#tooltip {
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.legend,
+table {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+blockquote a {
+    color: #3273dc !important;
+}
