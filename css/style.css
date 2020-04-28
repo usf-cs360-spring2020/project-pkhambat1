@@ -3,6 +3,10 @@
     height: 300px;
 }
 
+.image.is-200x200 {
+    width: 200px;
+    height: 200px;
+}
 
 /* .hero-body {
     padding: 7rem 1.5rem;

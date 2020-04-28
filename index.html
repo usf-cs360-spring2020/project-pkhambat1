@@ -1,136 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bulma - Tabs</title>
+        <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+        <!-- Bulma Version 0.8.x-->
+        <link rel='stylesheet prefetch' href='https://unpkg.com/bulma@0.8.0/css/bulma.min.css'>
+        <link rel="stylesheet" href="css/tabs.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zillow Rent Index (ZRI) in US States</title>
-    <!-- Load Bulma from CDN (consider saving it to repository instead) -->
-    <!-- https://bulma.io/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Load Font Awesome 5 (free) icons -->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
-
-<body>
-
-    <!-- Page header -->
-    <!-- https://bulma.io/documentation/layout/hero/ -->
-    <section class="hero is-primary is-bold">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">Zillow Rent Index (ZRI) in US States
-                </h1>
-                <h2 class="subtitle">Visualized in D3.js</h2>
-            </div>
-        </div>
-    </section>
-    <!-- End page header -->
-
-    <!-- Page navigation -->
-    <!-- https://bulma.io/documentation/components/navbar/ -->
-    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item is-active" href="index.html">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span>Home</span>
-                </a>
-                <a class="navbar-item" href="map.html">
-                    <span class="icon"><i class="fas fa-map"></i></span>
-                    <span>Map Visualization</span>
-                </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="main-menu" class="navbar-menu has-text-weight-medium">
-
-                <!-- Right navbar items -->
-                <div class="navbar-end">
-                    <a class="navbar-item" href="#grade" title="About">
-                        <span class="icon"><i class="fas fa-tasks"></i></span>
-                        <span>Grade</span>
-                    </a>
-
-                    <a class="navbar-item" href="#about" title="About">
-                        <span class="icon"><i class="fas fa-info-circle"></i></span>
-                        <span>About</span>
-                    </a>
+        <section class="hero is-info">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                    Home Values across US
+                    </h1>
+                    <h2 class="subtitle">
+                    Visualized in D3.js
+                    </h2>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- End page navigation -->
+            <div class="tabs is-boxed is-centered main-menu" id="nav">
+                <ul>
+                    <li data-target="pane-1" id="1" class="is-active">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-home"></i></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li data-target="pane-2" id="2">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-table"></i></span>
+                            <span>Data</span>
+                        </a>
+                    </li>
+                    <li data-target="pane-3" id="3">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
+                            <span>Map Visualisation 1</span>
+                        </a>
+                    </li>
+                    <li data-target="pane-4" id="4">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
+                            <span>Map Visualization 2</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-    <section class="section">
-        <div class="container">
-            <!-- Begin page content -->
-            <div class="content">
-                <h1 class="title">
-                    Overview
-                </h1>
-                <p class="subtitle">
-                    Zillow Rent Index (ZRI) in US States
-                </p>
-
-                <p>Zillow Rent Index (ZRI): A smoothed measure of the typical estimated market rate rent across a given region and housing type. ZRI, which is a dollar-denominated alternative to repeat-rent indices, is the mean of rent estimates that fall
-                    into the 40th to 60th percentile range for all homes and apartments in a given region, including those not currently listed for rent. Details available in ZRI methodology. Zillow also publishes the Zillow Rent Forecast.
-                </p>
-
-                <img src="img/zillow-home.jpg" alt="" style="width:500px;"><br>
-
-                <!-- <cite><small>Parks and Recreation Image: <a href="https://parksandrecreation.fandom.com/wiki/Season_3">https://parksandrecreation.fandom.com/wiki/Season_3</a></small></cite> -->
-
-
-                <h1 id="data">Dataset</h1>
-                <h3><u>Summary</u></h3>
-
-                <p>
-                    <b>Title:</b> ZRI Time Series, Multifamily, SFR, Condo/Co-op ($) <br />
-                    <b>Source:</b> <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a><br />
-                    <b>Publishing Department:</b> Zillow Research<br />
-                    <b>Rows:</b> 52<br />
-                    <b>Columns:</b> 90 <br />
-                    <b>Each row is a: </b> US State <br>
-                    <b>License:</b> Publicly available <br />
-                    <!-- <b>Data Readme: </b> <a href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf</a> -->
-                    <br />
-                    <b>Accessed:</b> <em>April 14, 2020</em><br />
-                </p>
-
-                <h3><u>Details</u></h3>
-
-                <p> The data for the visualizations has been sourced from the <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6/data">311 Requests </a> dataset from <a href="https://datasf.org">DataSF</a>.
-
-                    <blockquote>
-                        <p>
-                            "This dataset includes cases generally associated with a place or thing (for example parks, streets, or buildings) and created July 1, 2008 or later. Cases generally logged by a user regarding their own needs (for example, property or business tax questions,
-                            parking permit requests) are not included."
-                        </p>
-                        <cite>Source: <a
-                href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6">https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6</a></cite>
-                    </blockquote>
-                    <p>Some of the more relevant columns are listed below:</p>
-                    <ol>
-                        <li><strong>Region ID:</strong> State ID</li>
-                        <li><strong>Region Name:</strong> State Name</li>
-                        <li><strong>Size Rank:</strong> Ranking in terms of Geographical size</li>
-                        <li><strong>YYYY-MM:</strong> Estimated market rate for month MM of year YYYY</li>
-                    </ol>
+            <div class="tab-content">
+                <!-- HOME -->
+                <div class="tab-pane is-active" id="pane-1">
+                    <div class="content">
+                        <!-- <h1>Hello World</h1> -->
+                        <h1>Overview</h1>
 
 
-                    <h3><u>Wrangling</u></h3>
-                    <p>
-                        More details coming soon.
+                          <p><b>Zillow Home Value Index (ZHVI):</b> A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type. Zillow publishes top-tier ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes that fall within the 5th to 35th percentile range for a given region). Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage).</p>
 
-                    </p>
+                          <p>Zillow Rent Index (ZRI): A smoothed measure of the typical estimated market rate rent across a given region and housing type. ZRI, which is a dollar-denominated alternative to repeat-rent indices, is the mean of rent estimates that fall
+                              into the 40th to 60th percentile range for all homes and apartments in a given region, including those not currently listed for rent. Details available in ZRI methodology. Zillow also publishes the Zillow Rent Forecast.
+                          </p>
+                          <figcaption>
+                            Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                          </figcaption>
+
+                        <figure>
+                          <img src="img/zillow-home.jpg" alt="" style="max-width:400px;"><br>
+                          <figcaption>Source: <a href="https://www.zillow.com/sellers-guide/average-time-to-sell-a-house/" target="_blank">https://www.zillow.com/sellers-guide/average-time-to-sell-a-house/</a></figcaption>
+                        </figure>
 
                     <h1 id="grade">Grade</h1>
 
@@ -155,10 +97,7 @@
                                 <td>A</td>
                                 <td><i class="has-text-success fas fa-check-circle"></i></td>
                                 <td>
-                                    <ul>
-                                        <li>Details coming soon.</li>
-                                    </ul>
-                                    <!-- Implemented Non-Proportional Symbol Map in D3 v5, with details on demand interactivity and Zooming + Panning.
+                                    Implemented Non-Proportional Symbol Map in D3 v5, with details on demand interactivity and Zooming + Panning.
                                     <ul>
                                         <li>
                                             Encoded Source by color on an ordinal color scale
@@ -169,7 +108,7 @@
                                         <li>
                                             Map is zoomable and pannable, with circular data points scaling proportionally.
                                         </li>
-                                    </ul> -->
+                                    </ul>
                                 </td>
                             </tr>
                         </tbody>
@@ -180,14 +119,14 @@
                     <article class="media">
                         <!-- TODO: Replace with profile photo -->
                         <figure class="media-left">
-                            <p class="image is-300x300"><img class="is-rounded" src="img/profile.jpeg"></p>
+                            <p class="image is-200x200"><img class="is-rounded" src="img/profile.jpeg"></p>
                         </figure>
 
                         <div class="media-content">
                             <div class="content">
                                 <h4>👋 Hi, I'm Pezanne Khambatta</h4>
                                 <p>
-                                    CS Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br />
+                                    CS Major, <a href="https://www.usfca.edu/" target="_blank">University of San Francisco</a><br />
                                     <em>Expected Graduation: 2022</em><br>
                                     <i class="fas fa-envelope"></i> <a href="mailto:pkhambatta@dons.usfca.edu">pkhambatta@dons.usfca.edu</a>
                                 </p>
@@ -211,70 +150,74 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
-                    <!-- End profile box -->
-                    <!-- <blockquote>
+                        </article>
+
+                  </div>
+
+
+                </div>
+                <!-- DATA -->
+                <div class="tab-pane" id="pane-2">
+
+                    <div class="content">
+                        <!-- <h1>Hello World</h1> -->
+                        <h1 id="data">Dataset</h1>
+                        <h3><u>Summary</u></h3>
+
                         <p>
-                            Header Image:
-                            <cite><a
-                                href="https://thebolditalic.com/an-illustrated-guide-to-golden-gate-park-the-bold-italic-san-francisco-68c836c17a04">https://thebolditalic.com/an-illustrated-guide-to-golden-gate-park-the-bold-italic-san-francisco-68c836c17a04</a></cite>
+                            <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: City<br />
+                            <b>Source:</b> <a href="https://www.zillow.com/research/data/" target="_blank">https://www.zillow.com/research/data/</a><br />
+                            <b>Publishing Department:</b> Zillow Research<br />
+                            <b>Rows:</b> 33k+<br />
+                            <b>Columns:</b> 273 <br />
+                            <b>Each row is a: </b> US City <br>
+                            <b>License:</b> <a href="https://www.zillow.com/research/about-us/">Open Source </a><br />
+                            <!-- <b>Data Readme: </b> <a href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf</a> -->
+                            <br />
+                            <b>Accessed:</b> <em>April 28, 2020</em><br />
                         </p>
 
-                    </blockquote> -->
+                        <h3><u>Details</u></h3>
+
+                        <p> The data for the visualizations has been sourced from the <a href="https://www.zillow.com/research/data/">ZHVI All Homes</a> dataset from <a href="https://www.zillow.com">Zillow</a>.
+
+                            <blockquote>
+                                <p>
+                                    "The Zillow Home Value Index (ZHVI), built from the ground up by measuring monthly changes in property-level Zestimates, captures both the level and appreciation of home values across a wide variety of geographies and housing types (e.g. all 1-bedroom condominiums in ZIP Code 98101)."
+                                </p>
+                                <cite>Source: <a
+                        href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a></cite>
+                            </blockquote>
+                            <p>Some of the more relevant columns are listed below:</p>
+                            <ol>
+                                <li><strong>Region ID:</strong> State ID</li>
+                                <li><strong>Region Name:</strong> State Name</li>
+                                <li><strong>Size Rank:</strong> Ranking in terms of Geographical size</li>
+                                <li><strong>YYYY-MM:</strong> Estimated market rate for month MM of year YYYY</li>
+                            </ol>
+                            <h3><u>Wrangling</u></h3>
+                            <p>
+                                More details coming soon.
+
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- MAP VIS 1 -->
+                <div class="tab-pane" id="pane-3">
+                  <figure>
+                    <img src="img/zhvi.png" alt="" style="width: 960px;">
+                    <figcaption>
+Created By: Pezanne Khambatta
+Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                    </figcaption>
+                  </figure>
+                </div>
             </div>
-
-
-
-            <!-- End page content -->
-        </div>
     </section>
-
-    <!-- Page footer -->
-    <!-- https://bulma.io/documentation/layout/footer/ -->
-    <footer class="footer">
-        <div class="content has-text-centered is-size-7">
-            <p>
-                <a href="#top">
-                    <span class="fas fa-arrow-up"></span>
-                    <span class="has-text-weight-medium">Back to Top</span>
-                </a>
-            </p>
-
-            <p>
-                <a href="https://github.com/usf-cs360-spring2020/homework1-pkhambat1" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
-                    <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
-                </a>
-
-                <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
-                    <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
-                </a>
-
-                <a href="https://bulma.io" class="button is-small">
-                    <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
-                </a>
-            </p>
-        </div>
-    </footer>
-    <!-- End page footer -->
-
-    <!-- Mobile menu responsiveness -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            if ($navbarBurgers.length > 0) {
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
-                });
-            }
-        });
-    </script>
-    <!-- End mobile menu responsiveness -->
+    <script src="js/bulma.js"></script>
+    <script src="js/tabs.js"></script>
 </body>
-
 </html>
