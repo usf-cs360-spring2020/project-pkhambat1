@@ -40,13 +40,13 @@
                     <li data-target="pane-3" id="3">
                         <a>
                             <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
-                            <span>Map Visualisation 1</span>
+                            <span>Alpha Prototypes</span>
                         </a>
                     </li>
                     <li data-target="pane-4" id="4">
                         <a>
                             <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
-                            <span>Map Visualization 2</span>
+                            <span>Beta Prototype</span>
                         </a>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@
                               into the 40th to 60th percentile range for all homes and apartments in a given region, including those not currently listed for rent. Details available in ZRI methodology. Zillow also publishes the Zillow Rent Forecast.
                           </p>
                           <figcaption>
-                            Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                            Source: <a href="https://www.zillow.com/research/data/" target="_blank">https://www.zillow.com/research/data/</a>
                           </figcaption>
 
                         <figure>
@@ -165,7 +165,7 @@
                         <h3><u>Summary</u></h3>
 
                         <p>
-                            <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: City<br />
+                            <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: Neighborhood<br />
                             <b>Source:</b> <a href="https://www.zillow.com/research/data/" target="_blank">https://www.zillow.com/research/data/</a><br />
                             <b>Publishing Department:</b> Zillow Research<br />
                             <b>Rows:</b> 33k+<br />
@@ -205,16 +205,59 @@
 
                 </div>
 
-                <!-- MAP VIS 1 -->
+                <!-- ALPHA -->
                 <div class="tab-pane" id="pane-3">
+                  <div class="content">
+
+                    <figure>
+                      <img src="img/zillow.png" alt="" style="width: 960px;">
+                      <figcaption>
+                            Created By: Pezanne Khambatta
+                            Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <img src="img/zhvi.png" alt="" style="width: 960px;">
+                      <figcaption>
+                            Created By: Pezanne Khambatta
+                            Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                </div>
+
+                <!-- BETA -->
+                <div class="tab-pane" id="pane-4">
+                  <div class="content">
+                  <p>The beta prototypes have not been ready in time but I have some ideas I'd like to go forward with based on the following inspiration images</p>
+
+                  <h3>Inspiration</h3>
+                  <p>1.</p>
                   <figure>
-                    <img src="img/zhvi.png" alt="" style="width: 960px;">
+                    <img src="img/BHexMap.png" alt="">
                     <figcaption>
-Created By: Pezanne Khambatta
-Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+Source: <a href="https://bl.ocks.org/mbostock/4330486/fe47cd0f43281cae3283a5b397f8f0118262bf55" target="_blank">https://bl.ocks.org/mbostock/4330486/fe47cd0f43281cae3283a5b397f8f0118262bf55</a>
                     </figcaption>
                   </figure>
+
+                  <p>2.</p>
+                  <figure>
+                    <img src="img/HexMap.png" alt="">
+                    <figcaption>
+Source: <a href="https://observablehq.com/@d3/hexbin-map" target="_blank">https://observablehq.com/@d3/hexbin-map</a>
+                    </figcaption>
+                  </figure>
+
+                  <p>The median price would be represented by the size of each hexagon</p>
+                  <p>The price increase from '96 to '20 will be represeted by the color in each hexagon. The color scale could be either sequential (single hue) or sequential (multi-hue)</p>
+
+                  <h3>Planned Interactivity</h3>
+                  <p>I plan on including zoom and pan features for the map as well as have a detail-on-demand table showing neighborhood house prices data on click of a hexagon</p>
+
                 </div>
+                </div>
+
             </div>
     </section>
     <script src="js/bulma.js"></script>
