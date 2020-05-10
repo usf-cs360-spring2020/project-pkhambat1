@@ -1,7 +1,2 @@
 .DS_Store
-data/Neighborhood_Zhvi_AllHomes.csv
-data/Affordability_Wide_2018Q3_Public.csv
-data/Affordability_Wide_2017Q2_Public.csv
-data/Neighborhood_Zhvi_AllHomes.csv
-data/County_Zhvi_AllHomes_Excel.xlsx
-data/mortgareAffordabilityWrangled.csv
+data/_County_Zhvi_AllHomes.csv
