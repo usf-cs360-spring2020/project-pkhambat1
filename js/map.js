@@ -57,7 +57,7 @@ var promises = [
     d3.json("https://d3js.org/us-10m.v2.json"),
     // d3.tsv("unemployment.tsv", d => unemployment.set(d.id, +d.rate))
     // d3.csv("data/County_Zhvi_AllHomes.csv", updateZhvi),
-    d3.csv("data/_County_Zhvi_AllHomes.csv", updateZhvi)
+    d3.csv("data/test.csv", updateZhvi)
 ]
 
 Promise.all(promises).then(ready)

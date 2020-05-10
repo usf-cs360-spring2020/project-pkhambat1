@@ -82,4 +82,4 @@ var plotLine = (countyId) => {
         g.selectAll('*').remove();
     }
     
-    d3.csv('data/_County_Zhvi_AllHomes.csv', wrangle).then(data => gData = data);
+    d3.csv('data/test.csv', wrangle).then(data => gData = data);
