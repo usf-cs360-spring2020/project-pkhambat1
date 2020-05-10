@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Bulma - Tabs</title>
-        <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
-        <!-- Bulma Version 0.8.x-->
-        <link rel='stylesheet prefetch' href='https://unpkg.com/bulma@0.8.0/css/bulma.min.css'>
-        <link rel="stylesheet" href="css/tabs.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
 
-        <section class="hero is-info">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulma - Tabs</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <!-- Bulma Version 0.8.x-->
+    <link rel='stylesheet prefetch' href='https://unpkg.com/bulma@0.8.0/css/bulma.min.css'>
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
                     Home Values across US
-                    </h1>
-                    <h2 class="subtitle">
+                </h1>
+                <h2 class="subtitle">
                     Visualized in D3.js
-                    </h2>
-                </div>
+                </h2>
             </div>
-            <div class="tabs is-boxed is-centered main-menu" id="nav">
-                <ul>
-                    <li data-target="pane-1" id="1" class="is-active">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-home"></i></span>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li data-target="pane-2" id="2">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-table"></i></span>
-                            <span>Data</span>
-                        </a>
-                    </li>
-                    <li data-target="pane-3" id="3">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
-                            <span>Alpha Prototypes</span>
-                        </a>
-                    </li>
-                    <li data-target="pane-4" id="4">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
-                            <span>Beta Prototype</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        </div>
+        <div class="tabs is-boxed is-centered main-menu" id="nav">
+            <ul>
+                <li data-target="pane-1" id="1" class="is-active">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-home"></i></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li data-target="pane-2" id="2">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-table"></i></span>
+                        <span>Data</span>
+                    </a>
+                </li>
+                <li data-target="pane-3" id="3">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
+                        <span>Alpha Prototypes</span>
+                    </a>
+                </li>
+                <li data-target="pane-4" id="4">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
+                        <span>Beta Prototype</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="tab-content">
-                <!-- HOME -->
-                <div class="tab-pane is-active" id="pane-1">
-                    <div class="content">
-                        <!-- <h1>Hello World</h1> -->
-                        <h1>Overview</h1>
+        <div class="tab-content">
+            <!-- HOME -->
+            <div class="tab-pane is-active" id="pane-1">
+                <div class="content">
+                    <!-- <h1>Hello World</h1> -->
+                    <h1>Overview</h1>
 
 
-                          <p><b>Zillow Home Value Index (ZHVI):</b> A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type. Zillow publishes top-tier ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes that fall within the 5th to 35th percentile range for a given region). Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage).</p>
+                    <p><b>Zillow Home Value Index (ZHVI):</b> A smoothed, seasonally adjusted measure of the typical
+                        home value and market changes across a given region and housing type. Zillow publishes top-tier
+                        ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region)
+                        and bottom-tier ZHVI ($, typical value for homes that fall within the 5th to 35th percentile
+                        range for a given region). Zillow also publishes ZHVI for all single-family residences ($,
+                        typical value for all single-family homes in a given region), for condo/coops ($), for all homes
+                        with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes
+                        per square foot calculated by taking the estimated home value for each home in a given region
+                        and dividing it by the home’s square footage).</p>
 
-                          <p>Zillow Rent Index (ZRI): A smoothed measure of the typical estimated market rate rent across a given region and housing type. ZRI, which is a dollar-denominated alternative to repeat-rent indices, is the mean of rent estimates that fall
-                              into the 40th to 60th percentile range for all homes and apartments in a given region, including those not currently listed for rent. Details available in ZRI methodology. Zillow also publishes the Zillow Rent Forecast.
-                          </p>
-                          <figcaption>
-                            Source: <a href="https://www.zillow.com/research/data/" target="_blank">https://www.zillow.com/research/data/</a>
-                          </figcaption>
+                    <p>Zillow Rent Index (ZRI): A smoothed measure of the typical estimated market rate rent across a
+                        given region and housing type. ZRI, which is a dollar-denominated alternative to repeat-rent
+                        indices, is the mean of rent estimates that fall
+                        into the 40th to 60th percentile range for all homes and apartments in a given region, including
+                        those not currently listed for rent. Details available in ZRI methodology. Zillow also publishes
+                        the Zillow Rent Forecast.
+                    </p>
+                    <figcaption>
+                        Source: <a href="https://www.zillow.com/research/data/"
+                            target="_blank">https://www.zillow.com/research/data/</a>
+                    </figcaption>
 
-                        <figure>
-                          <img src="img/zillow-home.jpg" alt="" style="max-width:400px;"><br>
-                          <figcaption>Source: <a href="https://www.zillow.com/sellers-guide/average-time-to-sell-a-house/" target="_blank">https://www.zillow.com/sellers-guide/average-time-to-sell-a-house/</a></figcaption>
-                        </figure>
+                    <figure>
+                        <img src="img/zillow-home.jpg" alt=""><br>
+                        <figcaption>Source: <a href="https://www.zillow.com/sellers-guide/average-time-to-sell-a-house/"
+                                target="_blank">https://www.zillow.com/sellers-guide/average-time-to-sell-a-house/</a>
+                        </figcaption>
+                    </figure>
 
                     <h1 id="grade">Grade</h1>
 
@@ -97,16 +115,19 @@
                                 <td>A</td>
                                 <td><i class="has-text-success fas fa-check-circle"></i></td>
                                 <td>
-                                    Implemented Non-Proportional Symbol Map in D3 v5, with details on demand interactivity and Zooming + Panning.
+                                    Implemented Non-Proportional Symbol Map in D3 v5, with details on demand
+                                    interactivity and Zooming + Panning.
                                     <ul>
                                         <li>
                                             Encoded Source by color on an ordinal color scale
                                         </li>
                                         <li>
-                                            Hovering over district highlights it and shows its name. Hovering over the dots provides information on the respective 311 request as a table.
+                                            Hovering over district highlights it and shows its name. Hovering over the
+                                            dots provides information on the respective 311 request as a table.
                                         </li>
                                         <li>
-                                            Map is zoomable and pannable, with circular data points scaling proportionally.
+                                            Map is zoomable and pannable, with circular data points scaling
+                                            proportionally.
                                         </li>
                                     </ul>
                                 </td>
@@ -126,14 +147,20 @@
                             <div class="content">
                                 <h4>👋 Hi, I'm Pezanne Khambatta</h4>
                                 <p>
-                                    CS Major, <a href="https://www.usfca.edu/" target="_blank">University of San Francisco</a><br />
+                                    CS Major, <a href="https://www.usfca.edu/" target="_blank">University of San
+                                        Francisco</a><br />
                                     <em>Expected Graduation: 2022</em><br>
-                                    <i class="fas fa-envelope"></i> <a href="mailto:pkhambatta@dons.usfca.edu">pkhambatta@dons.usfca.edu</a>
+                                    <i class="fas fa-envelope"></i> <a
+                                        href="mailto:pkhambatta@dons.usfca.edu">pkhambatta@dons.usfca.edu</a>
                                 </p>
 
                                 <p>
-                                    I am a Masters student in Computer Science at <a href="https://www.usfca.edu/" target="_blank">University of San
-                    Francisco</a>, with a strong background in Industrial Design from <a href="https://www.risd.edu/" target="_blank">RISD</a>. I'm from Mumbai, India and have lived in Providence, Seattle and San Francisco over the last 6 years. My hobbies
+                                    I am a Masters student in Computer Science at <a href="https://www.usfca.edu/"
+                                        target="_blank">University of San
+                                        Francisco</a>, with a strong background in Industrial Design from <a
+                                        href="https://www.risd.edu/" target="_blank">RISD</a>. I'm from Mumbai, India
+                                    and have lived in Providence, Seattle and San Francisco over the last 6 years. My
+                                    hobbies
                                     include music, fitness, photography and off lately, cooking
                                 </p>
 
@@ -150,117 +177,115 @@
                                 </div>
                             </div>
                         </div>
-                        </article>
-
-                  </div>
-
-
-                </div>
-                <!-- DATA -->
-                <div class="tab-pane" id="pane-2">
-
-                    <div class="content">
-                        <!-- <h1>Hello World</h1> -->
-                        <h1 id="data">Dataset</h1>
-                        <h3><u>Summary</u></h3>
-
-                        <p>
-                            <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: Neighborhood<br />
-                            <b>Source:</b> <a href="https://www.zillow.com/research/data/" target="_blank">https://www.zillow.com/research/data/</a><br />
-                            <b>Publishing Department:</b> Zillow Research<br />
-                            <b>Rows:</b> 33k+<br />
-                            <b>Columns:</b> 273 <br />
-                            <b>Each row is a: </b> US City <br>
-                            <b>License:</b> <a href="https://www.zillow.com/research/about-us/">Open Source </a><br />
-                            <!-- <b>Data Readme: </b> <a href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf</a> -->
-                            <br />
-                            <b>Accessed:</b> <em>April 28, 2020</em><br />
-                        </p>
-
-                        <h3><u>Details</u></h3>
-
-                        <p> The data for the visualizations has been sourced from the <a href="https://www.zillow.com/research/data/">ZHVI All Homes</a> dataset from <a href="https://www.zillow.com">Zillow</a>.
-
-                            <blockquote>
-                                <p>
-                                    "The Zillow Home Value Index (ZHVI), built from the ground up by measuring monthly changes in property-level Zestimates, captures both the level and appreciation of home values across a wide variety of geographies and housing types (e.g. all 1-bedroom condominiums in ZIP Code 98101)."
-                                </p>
-                                <cite>Source: <a
-                        href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a></cite>
-                            </blockquote>
-                            <p>Some of the more relevant columns are listed below:</p>
-                            <ol>
-                                <li><strong>Region ID:</strong> State ID</li>
-                                <li><strong>Region Name:</strong> State Name</li>
-                                <li><strong>Size Rank:</strong> Ranking in terms of Geographical size</li>
-                                <li><strong>YYYY-MM:</strong> Estimated market rate for month MM of year YYYY</li>
-                            </ol>
-                            <h3><u>Wrangling</u></h3>
-                            <p>
-                                More details coming soon.
-
-                            </p>
-                        </div>
                     </article>
 
                 </div>
 
-                <!-- ALPHA -->
-                <div class="tab-pane" id="pane-3">
-                  <div class="content">
+
+            </div>
+            <!-- DATA -->
+            <div class="tab-pane" id="pane-2">
+
+                <div class="content">
+                    <!-- <h1>Hello World</h1> -->
+                    <h1 id="data">Dataset</h1>
+                    <h3><u>Summary</u></h3>
+
+                    <p>
+                        <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: Neighborhood<br />
+                        <b>Source:</b> <a href="https://www.zillow.com/research/data/"
+                            target="_blank">https://www.zillow.com/research/data/</a><br />
+                        <b>Publishing Department:</b> Zillow Research<br />
+                        <b>Rows:</b> 33k+<br />
+                        <b>Columns:</b> 273 <br />
+                        <b>Each row is a: </b> US City <br>
+                        <b>License:</b> <a href="https://www.zillow.com/research/about-us/">Open Source </a><br />
+                        <!-- <b>Data Readme: </b> <a href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf</a> -->
+                        <br />
+                        <b>Accessed:</b> <em>April 28, 2020</em><br />
+                    </p>
+
+                    <h3><u>Details</u></h3>
+
+                    <p> The data for the visualizations has been sourced from the <a
+                            href="https://www.zillow.com/research/data/">ZHVI All Homes</a> dataset from <a
+                            href="https://www.zillow.com">Zillow</a>.
+
+                        <blockquote>
+                            <p>
+                                "The Zillow Home Value Index (ZHVI), built from the ground up by measuring monthly
+                                changes in property-level Zestimates, captures both the level and appreciation of home
+                                values across a wide variety of geographies and housing types (e.g. all 1-bedroom
+                                condominiums in ZIP Code 98101)."
+                            </p>
+                            <cite>Source: <a
+                                    href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a></cite>
+                        </blockquote>
+                        <p>Some of the more relevant columns are listed below:</p>
+                        <ol>
+                            <li><strong>Region ID:</strong> State ID</li>
+                            <li><strong>Region Name:</strong> State Name</li>
+                            <li><strong>Size Rank:</strong> Ranking in terms of Geographical size</li>
+                            <li><strong>YYYY-MM:</strong> Estimated market rate for month MM of year YYYY</li>
+                        </ol>
+                        <h3><u>Wrangling</u></h3>
+                        <p>
+                            More details coming soon.
+
+                        </p>
+                </div>
+                </article>
+
+            </div>
+
+            <!-- ALPHA -->
+            <div class="tab-pane" id="pane-3">
+                <div class="content">
 
                     <figure>
-                      <img src="img/zillow.png" alt="" style="width: 960px;">
-                      <figcaption>
+                        <img src="img/zillow.png" alt="" style="width: 960px;">
+                        <figcaption>
                             Created By: Pezanne Khambatta
-                            Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
-                      </figcaption>
+                            Source: <a
+                                href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                        </figcaption>
                     </figure>
                     <figure>
-                      <img src="img/zhvi.png" alt="" style="width: 960px;">
-                      <figcaption>
+                        <img src="img/zhvi.png" alt="" style="width: 960px;">
+                        <figcaption>
                             Created By: Pezanne Khambatta
-                            Source: <a href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
-                      </figcaption>
+                            Source: <a
+                                href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                        </figcaption>
                     </figure>
-                  </div>
-
-                </div>
-
-                <!-- BETA -->
-                <div class="tab-pane" id="pane-4">
-                  <div class="content">
-                  <p>The beta prototypes have not been ready in time but I have some ideas I'd like to go forward with based on the following inspiration images</p>
-
-                  <h3>Inspiration</h3>
-                  <p>1.</p>
-                  <figure>
-                    <img src="img/BHexMap.png" alt="">
-                    <figcaption>
-Source: <a href="https://bl.ocks.org/mbostock/4330486/fe47cd0f43281cae3283a5b397f8f0118262bf55" target="_blank">https://bl.ocks.org/mbostock/4330486/fe47cd0f43281cae3283a5b397f8f0118262bf55</a>
-                    </figcaption>
-                  </figure>
-
-                  <p>2.</p>
-                  <figure>
-                    <img src="img/HexMap.png" alt="">
-                    <figcaption>
-Source: <a href="https://observablehq.com/@d3/hexbin-map" target="_blank">https://observablehq.com/@d3/hexbin-map</a>
-                    </figcaption>
-                  </figure>
-
-                  <p>The median price would be represented by the size of each hexagon</p>
-                  <p>The price increase from '96 to '20 will be represeted by the color in each hexagon. The color scale could be either sequential (single hue) or sequential (multi-hue)</p>
-
-                  <h3>Planned Interactivity</h3>
-                  <p>I plan on including zoom and pan features for the map as well as have a detail-on-demand table showing neighborhood house prices data on click of a hexagon</p>
-
-                </div>
                 </div>
 
             </div>
+
+            <!-- BETA -->
+            <div class="tab-pane" id="pane-4">
+                <div class="content">
+                    <p>The beta prototypes have not been ready in time but I have some ideas I'd like to go forward with
+                        based on the following inspiration images</p>
+                    <!-- <h2 class="year">2015</h2> -->
+                    <svg id="map" width="960" height="600"></svg>
+                    <br>
+                    <span id="county" style="color:grey;"><i>Hover over county for Median House Value Details</i></span>
+                    <div>
+                    <svg id="line-chart" width="960" height="150"></svg>
+                </div>
+                </div>
+            </div>
+
+        </div>
     </section>
-    <script src="js/bulma.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/line-chart.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/map.js"></script>
 </body>
+
 </html>

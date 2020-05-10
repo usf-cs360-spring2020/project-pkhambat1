@@ -8,6 +8,7 @@
     height: 200px;
 }
 
+
 /* .hero-body {
     padding: 7rem 1.5rem;
 } */
@@ -17,3 +18,88 @@
 .hero.is-primary .subtitle {
     text-shadow: 0 1px 0 grey, 0 -1px 0 grey, 1px 0 0 grey, -1px 0 0 grey;
 } */
+
+
+/* Line Chart */
+
+
+/* look in the inspector for what axis--x refers to */
+
+.axis--x path {
+    /* changing this affects whether the x-axis is drawn */
+    display: none;
+}
+
+.line {
+    /* try changing the fill---notice how weird it looks! */
+    /* that is because we do not have closed polygons. */
+    fill: none;
+    stroke: steelblue;
+    /* you can slide this value back and forth to see which lines are impacted */
+    stroke-width: 2px;
+}
+
+.border {
+    fill: none;
+    stroke-width: 1px;
+}
+
+/* .interior {
+    stroke: white;
+}
+
+.exterior {
+    stroke-width: 1px;
+    stroke: #727272;
+} */
+
+/* make it really clear where the plot area is inside the svg */
+
+rect#plot {
+    fill: white;
+    stroke: none;
+}
+
+
+/* Choropleth Map */
+.counties {
+    fill: none;
+}
+
+.states {
+    fill: none;
+    /* stroke: #bbbbbb; */
+    stroke-linejoin: round;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 7px;
+    font-size: 0.9em;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -moz-box-shadow:    3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow:         3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .wide {
+    width: 140px;
+  }
+  
+  .tooltip p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tooltip table {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+  }
+  
+  .wide {
+    width: 140px;
+  }
