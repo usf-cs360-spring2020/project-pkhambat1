@@ -89,14 +89,14 @@
     stroke-width: 1px;
 }
 
-/* .interior {
+.interior {
     stroke: white;
 }
 
 .exterior {
     stroke-width: 1px;
-    stroke: #727272;
-} */
+    stroke: #949494;
+} 
 
 /* make it really clear where the plot area is inside the svg */
 
