@@ -19,6 +19,51 @@
     text-shadow: 0 1px 0 grey, 0 -1px 0 grey, 1px 0 0 grey, -1px 0 0 grey;
 } */
 
+.black {
+    color: black!important;
+}
+
+.card {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+    margin-bottom: 2rem;
+  }
+  .card-header-title {
+    color: #8F99A3;
+    font-weight: 400;
+  }
+  .info-tiles {
+    margin: 1rem 0;
+  }
+  .info-tiles .subtitle {
+    font-weight: 300;
+    color: #8F99A3;
+  }
+  .hero.welcome.is-info {
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+  }
+  .hero.welcome .title, .hero.welcome .subtitle {
+    color: hsl(192, 17%, 99%);
+  }
+  .card .content {
+    font-size: 14px;
+  }
+  .card-footer-item {
+    font-size: 14px;
+    font-weight: 700;
+    color: #8F99A3;
+  }
+  .card-footer-item:hover {
+  }
+  .card-table .table {
+    margin-bottom: 0;
+  }
+  .events-card .card-table {
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+
 
 /* Line Chart */
 

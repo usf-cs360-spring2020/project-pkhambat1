@@ -44,7 +44,7 @@ gMap.append("text")
 .attr("fill", "#000")
 .attr("text-anchor", "start")
 .attr("font-weight", "bold")
-.text("Median House Value (2020)");
+.text("Median Home Value (2020)");
 
 gMap.call(d3.axisBottom(x)
 .tickSize(13)
