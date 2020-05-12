@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bulma - Tabs</title>
+    <title>Pezanne Khambatta - CS560 Final</title>
     <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
     <!-- Bulma Version 0.8.x-->
     <link rel='stylesheet prefetch' href='https://unpkg.com/bulma@0.8.0/css/bulma.min.css'>
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
-    
+
     <section class="hero is-info">
         <div class="hero-body">
             <div class="container">
@@ -22,7 +22,7 @@
                     Home Values across US
                 </h1>
                 <h2 class="subtitle">
-                    Visualized in D3.js
+                    What Does It Cost to Live in the US?
                 </h2>
             </div>
         </div>
@@ -49,12 +49,12 @@
                 <li data-target="pane-4" id="4">
                     <a>
                         <span class="icon is-small"><i class="fas fa-globe-americas"></i></span>
-                        <span><strong>Beta Prototype</strong></span>
+                        <span>Beta Prototype</span>
                     </a>
                 </li>
             </ul>
         </div>
-        
+
         <div class="tab-content">
             <!-- HOME -->
             <div class="tab-pane is-active" id="pane-1">
@@ -63,16 +63,44 @@
                     <figure>
                         <img src="img/pp-house.jpg" alt="">
                         <!-- <img src="img/vg-house.jpg" alt=""> -->
-                        
+
                         <br>
                         <figcaption><a href="https://www.pablo-ruiz-picasso.net/work-1532.php" target="_blank">Pablo
-                            Picasso - houses, 1937</a>
+                                Picasso - houses, 1937</a>
                         </figcaption>
                     </figure>
-                    
+
+
+                    <h1>Summary</h1>
+                    <p>
+                        This website takes a look into a large dataset about US home prices over time. The dataset is
+                        provided by <a href="https://www.zillow.com/" target="_blank">Zillow</a> - a popular online real
+                        estate company.
+                    </p>
+                    <p>
+                        🏠 We're all stuck at home anyway, so it seems to be a topical dataset.
+                    </p>
+
+                    <h1>Goals</h1>
+                    <p>
+                        My goal was to take this large, unwieldy dataset and present its findings using a sophisticated
+                        visualization that is intuitive to use and provides real insight.
+                    </p>
+                    <p>
+                        Viewers should be able to detect patterns of similar home prices by looking at the map and draw
+                        conjectures on what may have caused this topology. They should be able to see an outlier county
+                        within a state and be prompted to dig deeper as to why, for example, Washington County in
+                        Greenville, MS is
+                        priced so much higher than its neighboring counties.
+                    </p>
+                    <p>
+                        I'd like the visualizations to engage viewers to explore the map and find something new and
+                        interesting everytime.
+                    </p>
+
                     <h1>Overview</h1>
-                    
-                    
+
+
                     <p><b>Zillow Home Value Index (ZHVI):</b> A smoothed, seasonally adjusted measure of the typical
                         home value and market changes across a given region and housing type. Zillow publishes top-tier
                         ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region)
@@ -82,313 +110,436 @@
                         with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes
                         per square foot calculated by taking the estimated home value for each home in a given region
                         and dividing it by the home’s square footage).</p>
-                        
-                        <p>Zillow Rent Index (ZRI): A smoothed measure of the typical estimated market rate rent across a
-                            given region and housing type. ZRI, which is a dollar-denominated alternative to repeat-rent
-                            indices, is the mean of rent estimates that fall
-                            into the 40th to 60th percentile range for all homes and apartments in a given region, including
-                            those not currently listed for rent. Details available in ZRI methodology. Zillow also publishes
-                            the Zillow Rent Forecast.
-                        </p>
-                        <figcaption>
-                            Source: <a href="https://www.zillow.com/research/data/"
+
+                    <figcaption>
+                        Source: <a href="https://www.zillow.com/research/data/"
                             target="_blank">https://www.zillow.com/research/data/</a>
-                        </figcaption>
-                        
-                        
-                        
-                        <h1 id="grade">Grade</h1>
-                        
-                        <style>
-                            table.grades tbody tr td:nth-child(1),
-                            table.grades tbody tr td:nth-child(2) {
-                                text-align: center;
-                            }
-                        </style>
-                        
-                        <table class="table is-hoverable is-bordered grades">
-                            <thead>
-                                <tr>
-                                    <th>Letter</th>
-                                    <th>Done?</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            
-                            <tbody>
-                                <tr>
-                                    <td>A</td>
-                                    <td><i class="has-text-success fas fa-check-circle"></i></td>
-                                    <td>
-                                        Implemented Non-Proportional Symbol Map in D3 v5, with details on demand
-                                        interactivity and Zooming + Panning.
-                                        <ul>
-                                            <li>
-                                                Encoded Source by color on an ordinal color scale
-                                            </li>
-                                            <li>
-                                                Hovering over district highlights it and shows its name. Hovering over the
-                                                dots provides information on the respective 311 request as a table.
-                                            </li>
-                                            <li>
-                                                Map is zoomable and pannable, with circular data points scaling
-                                                proportionally.
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h1 id="about">About</h1>
-                        <!-- Profile box -->
-                        <!-- https://bulma.io/documentation/layout/media-object/ -->
-                        <article class="media">
-                            <!-- TODO: Replace with profile photo -->
-                            <figure class="media-left">
-                                <p class="image is-200x200"><img class="is-rounded" src="img/profile.jpeg"></p>
-                            </figure>
-                            
-                            <div class="media-content">
-                                <div class="content">
-                                    <h4>👋 Hi, I'm Pezanne Khambatta</h4>
-                                    <p>
-                                        CS Major, <a href="https://www.usfca.edu/" target="_blank">University of San
-                                            Francisco</a><br />
-                                            <em>Expected Graduation: 2022</em><br>
-                                            <i class="fas fa-envelope"></i> <a
-                                            href="mailto:pkhambatta@dons.usfca.edu">pkhambatta@dons.usfca.edu</a>
-                                        </p>
-                                        
-                                        <p>
-                                            I am a Masters student in Computer Science at <a href="https://www.usfca.edu/"
-                                            target="_blank">University of San
-                                            Francisco</a>, with a strong background in Industrial Design from <a
-                                            href="https://www.risd.edu/" target="_blank">RISD</a>. I'm from Mumbai, India
-                                            and have lived in Providence, Seattle and San Francisco over the last 6 years. My
-                                            hobbies
-                                            include music, fitness, photography and off lately, cooking
-                                        </p>
-                                        
-                                        <div class="heading">Skills</div>
-                                        
-                                        <div class="tags">
-                                            <span class="tag">Java</span>
-                                            <span class="tag">C#</span>
-                                            <span class="tag">Python</span>
-                                            <span class="tag">C</span>
-                                            <span class="tag">JavaScript</span>
-                                            <span class="tag">HTML</span>
-                                            <span class="tag">CSS</span>
-                                        </div>
-                                    </div>
+                    </figcaption>
+
+
+
+                    <!-- <h1 id="grade">Grade</h1>
+
+                    <style>
+                        table.grades tbody tr td:nth-child(1),
+                        table.grades tbody tr td:nth-child(2) {
+                            text-align: center;
+                        }
+                    </style>
+
+                    <table class="table is-hoverable is-bordered grades">
+                        <thead>
+                            <tr>
+                                <th>Letter</th>
+                                <th>Done?</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>A</td>
+                                <td><i class="has-text-success fas fa-check-circle"></i></td>
+                                <td>
+                                    Implemented Non-Proportional Symbol Map in D3 v5, with details on demand
+                                    interactivity and Zooming + Panning.
+                                    <ul>
+                                        <li>
+                                            Encoded Source by color on an ordinal color scale
+                                        </li>
+                                        <li>
+                                            Hovering over district highlights it and shows its name. Hovering over the
+                                            dots provides information on the respective 311 request as a table.
+                                        </li>
+                                        <li>
+                                            Map is zoomable and pannable, with circular data points scaling
+                                            proportionally.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                    <h1 id="about">About</h1>
+                    <!-- Profile box -->
+                    <!-- https://bulma.io/documentation/layout/media-object/ -->
+                    <article class="media">
+                        <!-- TODO: Replace with profile photo -->
+                        <figure class="media-left">
+                            <p class="image is-200x200"><img class="is-rounded" src="img/profile.jpeg"></p>
+                        </figure>
+
+                        <div class="media-content">
+                            <div class="content">
+                                <h4>👋 Hi, I'm Pezanne Khambatta</h4>
+                                <p>
+                                    CS Major, <a href="https://www.usfca.edu/" target="_blank">University of San
+                                        Francisco</a><br />
+                                    <em>Expected Graduation: 2022</em><br>
+                                    <i class="fab fa-github"></i> <a href="https://www.github.com/pkhambat1"
+                                        target="_blank">www.github.com/pkhambat1</a><br>
+                                    <i class="fas fa-envelope"></i> <a
+                                        href="mailto:pkhambatta@dons.usfca.edu">pkhambatta@dons.usfca.edu</a>
+
+                                </p>
+
+                                <p>
+                                    I am a Masters student in Computer Science at <a href="https://www.usfca.edu/"
+                                        target="_blank">University of San
+                                        Francisco</a>, with a strong background in Industrial Design from <a
+                                        href="https://www.risd.edu/" target="_blank">RISD</a>. I'm from Mumbai, India
+                                    and have lived in Providence, Seattle and San Francisco over the last 6 years. My
+                                    hobbies
+                                    include music, fitness, photography and off lately, cooking
+                                </p>
+
+                                <div class="heading">Skills</div>
+
+                                <div class="tags">
+                                    <span class="tag">Java</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">C</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
                                 </div>
-                            </article>
-                            
+                            </div>
                         </div>
-                        
-                        
-                    </div>
-                    <!-- DATA -->
-                    <div class="tab-pane" id="pane-2">
-                        
-                        <div class="content">
-                            <h1 id="data">Dataset</h1>
-                            <h3><u>Raw</u></h3>
-                            
+                    </article>
+
+                </div>
+
+
+            </div>
+            <!-- DATA -->
+            <div class="tab-pane" id="pane-2">
+
+                <div class="content">
+                    <h1 id="data">Dataset</h1>
+                    <h3><u>Raw</u></h3>
+
+                    <p>
+                        <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: County<br />
+                        <b>Source:</b> <a href="https://www.zillow.com/research/data/"
+                            target="_blank">https://www.zillow.com/research/data/</a><br />
+                        <b>Publishing Department:</b> Zillow Research<br />
+                        <b>Rows:</b> 2,843<br />
+                        <b>Columns:</b> 300 <br />
+                        <b>Each row is a: </b> US County <br>
+                        <b>License:</b> <a href="https://www.zillow.com/research/about-us/">Open Source </a><br />
+                        <b>Data Description / Methodology: </b> <a
+                            href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a>
+                        <br>
+                        <b>Download Link: </b> <a
+                            href="http://files.zillowstatic.com/research/public/County/County_Zhvi_AllHomes.csv"
+                            download>County_Zhvi_AllHomes.csv</a>
+                        <br>
+                        <b>Accessed:</b> <em>April 2020</em><br />
+                    </p>
+                    <section class="info-tiles">
+                        <div class="tile is-ancestor has-text-centered">
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <p class="black subtitle">Rows</p>
+                                    <p class="black title">2.8k</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <p class="black subtitle">Columns</p>
+                                    <p class="black title">300</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <p class="black subtitle">Size</p>
+                                    <p class="black title">6MB</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <p class="black subtitle">Last Accessed</p>
+                                    <p class="black title">April 2020</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <p class="black title">US County</p>
+                                    <p class="black subtitle">Each row is a</p>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <h4><u><i>Details</i></u></h4>
+
+                    <p> The data for the visualizations has been sourced from the <a
+                            href="https://www.zillow.com/research/data/">ZHVI All Homes</a> dataset from <a
+                            href="https://www.zillow.com">Zillow</a>.
+
+                        <blockquote>
                             <p>
-                                <b>Title:</b> ZHVI All Homes (SFR, Condo/Co-op) Time Series ($), Geography: County<br />
-                                <b>Source:</b> <a href="https://www.zillow.com/research/data/"
-                                target="_blank">https://www.zillow.com/research/data/</a><br />
-                                <b>Publishing Department:</b> Zillow Research<br />
-                                <b>Rows:</b> 2.8k<br />
-                                <b>Columns:</b> 300 <br />
-                                <b>Each row is a: </b> US County <br>
-                                <b>License:</b> <a href="https://www.zillow.com/research/about-us/">Open Source </a><br />
-                                <b>Data Description / Methodology: </b> <a
-                                href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a>
-                                <br>
-                                <b>Download Link: </b> <a
-                                href="http://files.zillowstatic.com/research/public/County/County_Zhvi_AllHomes.csv"
-                                download>County_Zhvi_AllHomes.csv</a>
-                                <br>
-                                <b>Accessed:</b> <em>April 2020</em><br />
+                                "The Zillow Home Value Index (ZHVI), built from the ground up by measuring monthly
+                                changes in property-level Zestimates, captures both the level and appreciation of home
+                                values across a wide variety of geographies and housing types (e.g. all 1-bedroom
+                                condominiums in ZIP Code 98101)."
                             </p>
-                            <section class="info-tiles">
-                                <div class="tile is-ancestor has-text-centered">
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="black subtitle">Rows</p>
-                                            <p class="black title">2.8k</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="black subtitle">Columns</p>
-                                            <p class="black title">300</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="black subtitle">Size</p>
-                                            <p class="black title">6MB</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="black subtitle">Last Accessed</p>
-                                            <p class="black title">April 2020</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="black title">US County</p>
-                                            <p class="black subtitle">Each row is a</p>
-                                        </article>
-                                    </div>
+                            <cite>Source: <a
+                                    href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a></cite>
+                        </blockquote>
+                        <p>Some of the more relevant columns are listed below:</p>
+                        <ol>
+                            <li><strong>RegionName:</strong> County Name</li>
+                            <li><strong>SizeRank:</strong> Ranking in Terms of Geographical Size</li>
+                            <li><strong>State:</strong> State Name abbr.</li>
+                            <li><strong>StateCodeFIPS:</strong> 2 digit State Code</li>
+                            <li><strong>MunicipalCodeFIPS:</strong> 3 Digit Municipal Code</li>
+                            <li><strong><i>YYYY-MM-DD</i> (several columns):</strong> Estimated market rate for day DD &
+                                month MM of year
+                                YYYY</li>
+                        </ol>
+
+                        <hr>
+
+                        <!-- WRANGLED -->
+                        <h3><u>Wrangled</u></h3>
+
+                        <figure>
+                            <img src="img/excel.png" alt="" style="width:600px;">
+                            <figcaption>
+                                <a href="https://dribbble.com/shots/6271111-Isometric-Excel-Microsoft"> Illustration:
+                                    Andre Saad</a>
+                            </figcaption>
+
+                        </figure>
+
+                        <p>The very wide dataset was first wrangled in Tableau and then in Excel.</p>
+                        <p>Tableau was used to take all the date columns and "pivot" them into the rows such that the
+                            dataset is now narrow but much deeper. Excel was used to fill in the missing "County ID"
+                            data by merging "State Code FIPS" and "Municipal Code FIPS" with the appropriate trailing
+                            0's, as shown below (in pseudocode).</p>
+                        <p></p>
+                        <blockquote>
+                            <p>
+                                COUNTY ID = CONCATENATE(TEXT(STATE FIPS, "00"), TEXT(MINICIPAL FIPS, "000"))
+                            </p>
+                        </blockquote>
+
+                        <p>
+                            <b>Rows:</b> 827,313<br />
+                            <b>Columns:</b> 7 <br />
+                            <b>Each row is a: </b> Median Home Value reading for given date and county <br>
+                            <b>Download Link: </b> <a
+                                href="https://raw.githubusercontent.com/usf-cs360-spring2020/project-pkhambat1/gh-pages/data/_County_Zhvi_AllHomes.csv"
+                                download>_County_Zhvi_AllHomes.csv</a>
+                            <br>
+                        </p>
+
+                        <section class="info-tiles">
+                            <div class="tile is-ancestor has-text-centered">
+                                <div class="tile is-parent">
+                                    <article class="tile is-child box">
+                                        <p class="black subtitle">Rows</p>
+                                        <p class="black title">827k</p>
+                                    </article>
                                 </div>
-                            </section>
-                            <h3><u>Details</u></h3>
-                            
-                            <p> The data for the visualizations has been sourced from the <a
-                                href="https://www.zillow.com/research/data/">ZHVI All Homes</a> dataset from <a
-                                href="https://www.zillow.com">Zillow</a>.
-                                
-                                <blockquote>
-                                    <p>
-                                        "The Zillow Home Value Index (ZHVI), built from the ground up by measuring monthly
-                                        changes in property-level Zestimates, captures both the level and appreciation of home
-                                        values across a wide variety of geographies and housing types (e.g. all 1-bedroom
-                                        condominiums in ZIP Code 98101)."
-                                    </p>
-                                    <cite>Source: <a
-                                        href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/">https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/</a></cite>
-                                    </blockquote>
-                                    <p>Some of the more relevant columns are listed below:</p>
-                                    <ol>
-                                        <li><strong>RegionName:</strong> County Name</li>
-                                        <li><strong>SizeRank:</strong> Ranking in terms of Geographical size</li>
-                                        <li><strong>State:</strong> State Name abbr.</li>
-                                        <li><strong>StateCodeFIPS:</strong> 2 digit State Code</li>
-                                        <li><strong>MunicipalCodeFIPS:</strong> 3 Digit Municipal Code</li>
-                                        <li><strong>... YYYY-MM-DD:</strong> Estimated market rate for day DD & month MM of year
-                                            YYYY</li>
-                                        </ol>
-                                        
-                                        <hr>
-                                        
-                                        <!-- WRANGLED -->
-                                        <h3><u>Wrangled</u></h3>
-                                        
-                                        <figure>
-                                            <img src="img/excel.png" alt="" style="width:600px;">
-                                            <figcaption>
-                                                <a href="https://dribbble.com/shots/6271111-Isometric-Excel-Microsoft"> Illustration:
-                                                    Andre Saad</a>
-                                                </figcaption>
-                                                
-                                            </figure>
-                                            
-                                            <p>The very wide dataset was first wrangled in Tableau and then in Excel.</p>
-                                            <p>Tableau was used to take all the date columns and "pivot" them into the rows such that the
-                                                dataset is now narrow but much deeper. Excel was used to fill in the missing "County ID"
-                                                data by merging "State Code FIPS" and "Municipal Code FIPS" with the appropriate trailing
-                                                0's, as shown below (in pseudocode).</p>
-                                                <p></p>
-                                                <pre>
-                                                    COUNTY ID = CONCATENATE(TEXT(STATE FIPS, "00"), TEXT(MINICIPAL FIPS, "000"))
-                                                </pre>
-                                                
-                                                <p>
-                                                    <b>Rows:</b> 827k<br />
-                                                    <b>Columns:</b> 7 <br />
-                                                    <b>Each row is a: </b> Median Home Value reading for given date and county <br>
-                                                </p>
-                                                
-                                                <section class="info-tiles">
-                                                    <div class="tile is-ancestor has-text-centered">
-                                                        <div class="tile is-parent">
-                                                            <article class="tile is-child box">
-                                                                <p class="black subtitle">Rows</p>
-                                                                <p class="black title">837k</p>
-                                                            </article>
-                                                        </div>
-                                                        <div class="tile is-parent">
-                                                            <article class="tile is-child box">
-                                                                <p class="black subtitle">Columns</p>
-                                                                <p class="black title">7</p>
-                                                            </article>
-                                                        </div>
-                                                        <div class="tile is-parent">
-                                                            <article class="tile is-child box">
-                                                                <p class="black subtitle">Size</p>
-                                                                <p class="black title">46.2MB</p>
-                                                            </article>
-                                                        </div>
-                                                        <div class="tile is-parent">
-                                                            <article class="tile is-child box">
-                                                                <p class="black subtitle">Each row is a</p>
-                                                                <p class="black title">Median Home Value Reading</p>
-                                                            </article>
-                                                        </div>
-                                                    </div>
-                                                </section>
-                                                
-                                                
-                                            </div>
-                                        </article>
-                                        
-                                    </div>
-                                    
-                                    <!-- ALPHA -->
-                                    <div class="tab-pane" id="pane-3">
-                                        <div class="content">
-                                            
-                                            <p>US Home Value Records by State</p>
-                                            <figure>
-                                                <img src="img/zillow.png" alt="" style="width: 960px;">
-                                                <figcaption>
-                                                    Created By: Pezanne Khambatta<br>
-                                                    Source: <a
-                                                    href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
-                                                </figcaption>
-                                            </figure>
-                                            <p>US Home Values 2017 - 2020</p>
-                                            <figure>
-                                                <img src="img/zhvi.png" alt="" style="width: 960px;">
-                                                <figcaption>
-                                                    Created By: Pezanne Khambatta<br>
-                                                    Source: <a
-                                                    href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <!-- BETA -->
-                                    <div class="tab-pane" id="pane-4">
-                                        <div class="content">
-                                            <p>The beta prototypes have not been ready in time but I have some ideas I'd like to go forward with
-                                                based on the following inspiration images</p>
-                                                <!-- <h2 class="year">2015</h2> -->
-                                                <svg id="map" width="960" height="600"></svg>
-                                                <br>
-                                                <span id="county" style="color:grey;"><i>Hover over county for Median House Value Details</i></span>
-                                                <div>
-                                                    <svg id="line-chart" width="960" height="150"></svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </section>
-                                <script src="https://d3js.org/d3.v5.min.js"></script>
-                                <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-                                <script src="https://d3js.org/topojson.v3.min.js"></script>
-                                <script src="js/helpers.js"></script>
-                                <script src="js/line-chart.js"></script>
-                                <script src="js/tabs.js"></script>
-                                <script src="js/map.js"></script>
-                            </body>
-                            
-                            </html>
+                                <div class="tile is-parent">
+                                    <article class="tile is-child box">
+                                        <p class="black subtitle">Columns</p>
+                                        <p class="black title">6</p>
+                                    </article>
+                                </div>
+                                <div class="tile is-parent">
+                                    <article class="tile is-child box">
+                                        <p class="black subtitle">Size</p>
+                                        <p class="black title">46.2MB</p>
+                                    </article>
+                                </div>
+                                <div class="tile is-parent">
+                                    <article class="tile is-child box">
+                                        <p class="black subtitle">Each row is a</p>
+                                        <p class="black title">Median Home Value Reading</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+                        <h4><u><i>Details</i></u></h4>
+
+                        <ol>
+                            <li><strong>Metro:</strong> Metro Name</li>
+                            <li><strong>Date:</strong> YYYY-MM-DD Format Date</li>
+                            <li><strong>Median Price:</strong>Estimated Market Rate</li>
+                            <li><strong>Size Rank:</strong> Ranking in Terms of Geographical Size</li>
+                            <li><strong>State:</strong> State Name abbr.</li>
+                            <li><strong>County ID:</strong> 5 digit County ID</li>
+                        </ol>
+
+                </div>
+                </article>
+
+            </div>
+
+            <!-- ALPHA -->
+            <div class="tab-pane" id="pane-3">
+                <div class="content">
+                    <h1>1. Choropleth Map</h1>
+
+                    <p>US Home Value Records by State</p>
+                    <figure>
+                        <img src="img/zillow.png" alt="" style="width: 960px;">
+                        <figcaption>
+                            Created By: Pezanne Khambatta<br>
+                            Source: <a
+                                href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                        </figcaption>
+                    </figure>
+                    <p>The choropleth map above shows number of home value records across USA, encoded by color</p>
+
+                    <h1>2. Bar Chart</h1>
+
+                    <p>US Home Values 2017 - 2020</p>
+                    <figure>
+                        <img src="img/zhvi.png" alt="" style="width: 960px;">
+                        <figcaption>
+                            Created By: Pezanne Khambatta<br>
+                            Source: <a
+                                href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                        </figcaption>
+                    </figure>
+                    <p>The bar chart above shows Median Home Value by state over the 2017 - 2020</p>
+
+                    <h1>Feedback</h1>
+                    <p>Due to not having beta prototypes ready in time, I only received feedback for the alpha
+                        prototypes, listed on the Alpha Prototypes Page.</p>
+
+                    <p>The bar chart was appreciated for the manner in which the viewer can " understand that the value
+                        of houses in different states vary quite obviously". </p>
+
+
+                </div>
+
+            </div>
+
+            <!-- BETA -->
+            <div class="tab-pane" id="pane-4">
+                <div class="content">
+                    <h1>Choropleth Map</h1>
+                    <p>Median Home Values in US (1996 - 2020)</p>
+                    <!-- <h2 class="year">2015</h2> -->
+
+                    <figure>
+                        <svg id="map" width="960" height="600"></svg>
+                        <br>
+                        <span id="county" style="color:grey;"><i>Hover over county for Median Home Value
+                                Details</i></span>
+                        <div>
+                            <svg id="line-chart" width="960" height="150"></svg>
+                        </div>
+                        <figcaption>
+                            Created By: Pezanne Khambatta<br>
+                            Source: <a
+                                href="https://www.zillow.com/research/data/">https://www.zillow.com/research/data/</a>
+                        </figcaption>
+                    </figure>
+                    <h4><u>Encoding</u></h4>
+                    <p>
+                        Each county is encoded positionally on the above choropleth map - the geographic location of the
+                        county is encoded by its position on the map. The color within each county encodes latest median
+                        home value (incidentally, 2020).
+                    </p>
+
+                    <h4><u>Interactivity</u></h4>
+                    <p>
+                        Hovering over a county will cause a tooltip to appear, with details about the county, metro and
+                        state name. It also provodes the numerical value of median home value and displays size rank.
+                    </p>
+                    <p>
+                        Additionally, a contextual line chart also appears, to provide temporal details for the home
+                        value, ranging from as far back as 1996 to 2020.
+                    </p>
+
+                    <h4><u>Peer Feedback</u></h4>
+                    <p>
+                        Due to not being able to complete beta prototypes in time, I only received feedback for <span data-target="pane-3">Alpha Prototypes</a>.
+                    </p>
+
+                    <h4><u>Conclusion</u></h4>
+                    <p>
+                        It can be seen that the US has a diverse range of home values across its topography. The West of
+                        the US seems to have higher valued homes than the East. We can also notice patterns such as
+                        clusters of expensive counties in CA ans a strip of expensive counties lined along the East
+                        Coast.
+                    </p>
+                    <p>
+                        The line charts for several different counties show a steep drop in price around 2008, which is
+                        reflective of the US Housing Market Crisis of 2008.
+                    </p>
+                    <p>
+                        Zillow seems to be missing data for a lot of counties down the vertical middle of the US.
+                    </p>
+
+
+                    <blockquote>
+                        <h5>
+                            Acknowledgements:
+                        </h5>
+
+
+                        <p> Bulk of Starter Code for Choropleth: <cite><a
+                                    href="https://bl.ocks.org/adamjanes/6cf85a4fd79e122695ebde7d41fe327f">Adam James -
+                                    Choropleth V5</a></cite>
+                        </p>
+                        <p> Tooltip: <cite><a href="http://bl.ocks.org/dougdowson/9832019">Doug Dowson -
+                                    Choropleth</a></cite>
+                        </p>
+                        <p> US Map interior and exterior borders: <cite><a
+                                    href="https://bl.ocks.org/sjengle/2e58e83685f6d854aa40c7bc546aeb24">Sophie Engle -
+                                    Flight Paths Edge Bundling</a></cite>
+                        </p>
+
+                    </blockquote>
+                </div>
+            </div>
+
+        </div>
+    </section>
+      <!-- Page footer -->
+    <!-- https://bulma.io/documentation/layout/footer/ -->
+    <footer class="footer">
+            <div class="content has-text-centered is-size-7">
+                <p>
+                    <a href="#top">
+                        <span class="fas fa-arrow-up"></span>
+                        <span class="has-text-weight-medium">Back to Top</span>
+                    </a>
+                </p>
+    
+                <p>
+                    <a href="https://github.com/usf-cs360-spring2020/homework1-pkhambat1" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                        <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
+                    </a>
+    
+                    <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                        <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
+                    </a>
+    
+                    <a href="https://bulma.io" class="button is-small">
+                        <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                </p>
+            </div>
+        </footer>
+        <!-- End page footer -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="map.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/line-chart.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/map.js"></script>
+
+</body>
+
+</html>
